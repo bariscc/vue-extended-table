@@ -1,0 +1,26 @@
+{
+  "name": "extended-table",
+  "version": "1.0.0",
+  "description": "A Vue.js plugin wrapper for vue-good-table with export ability",
+  "main": "dist/extended-table.umd.js",
+  "module": "dist/extended-table.esm.js",
+  "unpkg": "dist/extended-table.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup --config rollup.config.js"
+  },
+  "author": "Baris Ceylan",
+  "license": "MIT",
+  "dependencies": {
+    "html2canvas": "^1.0.0-rc.3",
+    "pptxgenjs": "^2.5.0",
+    "vue": "^2.6.10",
+    "vue-good-table": "^2.18.0"
+  },
+  "devDependencies": {
+    "vue-template-compiler": "^2.6.10",
+    "rollup-plugin-buble": "^0.19.8",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-vue": "^5.0.1"
+  }
+}
