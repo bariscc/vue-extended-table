@@ -9,7 +9,7 @@ Exposes PptxGenJS and html2canvas objects globally via `this.$PptxGenJS`
 ### Installation
 
 First, install with:
-`$ npm install vue-extended-table`
+`$ npm install bariscc/vue-extended-table#master`
 
 Then add it globally on your Vue Instance (main.js):
 
@@ -18,41 +18,37 @@ Then add it globally on your Vue Instance (main.js):
 	import ExtendedTable from "extended-table";
 	Vue.use(ExtendedTable);
 
-or, import to a component and register:
-
-	// MyComponent.vue
-	
-	import ExtendedTable from "extended-table";
-	...
-
-	components: {
-		ExtendedTable
-	}
-
 
 ### Methods
 
-	<ExtendedTable :tableData="tableData" exportType="pptxImage" :onExport="myExportFn" fileName='MyFile' />
+	<ExtendedTable 
+		:tableData="tableData" 
+		exportType="pptxImage" 
+		:onExport="myExportFn" 
+		fileName="MyFile"
+		/>
 
-| Props         | Description                    |
+| Props         | Type| Default|Description                    |
 | ------------- | ------------------------------ |
-| `tableData`   | accepts VueGoodTable props.    |
-| `exportType`  | Optional, default is 'ptxTable'. Currently accepts 'pptxTable' or 'pptxImage'.    |
-| `onExport`    | Optional. if not used, a default export will be created and downloaded. Returns `(pptx, data)` if a function provided. |
-| `fileName`    | optional. default is 'Report'. Extension is not required.    |
+| `tableData`   | {} | Required|accepts VueGoodTable props.    |
+| `exportType`  | String | pptxTable|Currently accepts 'pptxTable' or 'pptxImage'.    |
+| `onExport`    |Fn |  |If not used, a default export will run. Returns `(pptx, data)` if a function provided. |
+| `fileName`    |String | Report |Exported file name. Extension is not required.    |
 
 ### Customization
 
-## onExport
+#### onExport
 
 Returns a `pptxGenJS` instance and `data`.
+
 `data` is either an array to be used in the pptx or a Base64 image depending on `exportType`.
 
-## Exposed methods
+#### Exposed methods
 
-Once the plugin imported, the objects `this.$pptxGenJS` and `this.$canvas2html` can be accessed from vue instance for further customization. 
+Once the plugin imported, the objects `this.$pptxGenJS` and `this.$html2canvas` can be accessed from vue instance for further customization. 
 
 ### Links
 
 [vue-good-table](https://github.com/xaksis/vue-good-table)
-[vue-good-table](https://github.com/gitbrent/PptxGenJS)
+[PptxGenJS](https://github.com/gitbrent/PptxGenJS)
+[html2canvas](https://html2canvas.hertzen.com/documentation)
