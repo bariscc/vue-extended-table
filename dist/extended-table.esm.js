@@ -289,7 +289,7 @@ __vue_render__._withStripped = true;
 
 var plugin = {
   install: function install(Vue, options) {
-    Vue.component("v-table", ExtendedTable);
+    Vue.component("ExtendedTable", ExtendedTable);
     Vue.prototype.$PptxGenJS = PptxGenJS;
     Vue.prototype.$html2canvas = html2canvas;
   }
