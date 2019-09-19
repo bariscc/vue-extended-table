@@ -54,13 +54,12 @@ var script = {
   },
   props: {
     tableData: {
-      data: Object,
-      required: true
+      data: Object
     },
     exportType: {
       data: String,
       default: function default$1() {
-        return "pptxTable";
+        return "pptxImage";
       },
       validator: function(value) {
         return ["pptxTable", "pptxImage"].indexOf(value) !== -1;
@@ -246,14 +245,16 @@ var __vue_render__ = function() {
         "div",
         { ref: "captureDiv", staticClass: "capture" },
         [
-          _c(
-            "VueGoodTable",
-            _vm._b({}, "VueGoodTable", _vm.tableData, false),
-            [_vm._t("default")],
-            2
-          )
+          _vm.tableData
+            ? _c(
+                "VueGoodTable",
+                _vm._b({}, "VueGoodTable", _vm.tableData, false),
+                [_vm._t("default")],
+                2
+              )
+            : _vm._t("default")
         ],
-        1
+        2
       )
     ],
     1

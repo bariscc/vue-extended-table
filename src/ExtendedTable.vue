@@ -30,7 +30,7 @@ export default {
     exportType: {
       data: String,
       default() {
-        return "pptxTable";
+        return "pptxImage";
       },
       validator: function(value) {
         return ["pptxTable", "pptxImage"].indexOf(value) !== -1;
