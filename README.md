@@ -1,8 +1,6 @@
 ### Features
 
 This Vue plugin is a wrapper around vue-good-table, PptxGenJS and html2canvas for data exporting.
-Currently features are:
-Exposes PptxGenJS and html2canvas objects globally via `this.$PptxGenJS`
 
 
 
@@ -28,12 +26,12 @@ Then add it globally on your Vue Instance (main.js):
 		fileName="MyFile"
 		/>
 
-| Props         | Type| Default|Description                    |
-| ------------- | ------------------------------ |
-| `tableData`   | {} | Required|accepts VueGoodTable props.    |
-| `exportType`  | String | pptxTable|Currently accepts 'pptxTable' or 'pptxImage'.    |
-| `onExport`    |Fn |  |If not used, a default export will run. Returns `(pptx, data)` if a function provided. |
-| `fileName`    |String | Report |Exported file name. Extension is not required.    |
+| Props         | Type | Default | Description   
+| ------------- |-------------| -----|   -----|                    
+| `tableData`   | {} | Required | accepts VueGoodTable props.    
+| `exportType`  | String | pptxTable | Currently accepts 'pptxTable' or 'pptxImage'.    
+| `onExport`    | Fn |  | If not used, a default export will run. Returns `(pptx, data)` if a function provided. 
+| `fileName`    | String | Report | Exported file name. Extension is not required.    
 
 ### Customization
 
