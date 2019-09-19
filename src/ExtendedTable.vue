@@ -2,9 +2,10 @@
   <div class="extended">
     <Button @click="onClickExport()">Export</Button>
     <div class="capture" ref="captureDiv">
-      <VueGoodTable v-bind="tableData">
+      <VueGoodTable v-if='tableData' v-bind="tableData">
         <slot></slot>  
       </VueGoodTable>
+      <slot v-else></slot>
     </div>
   </div>
 </template>
@@ -24,8 +25,7 @@ export default {
   },
   props: {
     tableData: {
-      data: Object,
-      required: true
+      data: Object
     },
     exportType: {
       data: String,
